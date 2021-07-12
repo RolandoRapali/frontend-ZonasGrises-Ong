@@ -6,21 +6,20 @@
     <title>Zonas Grises</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <meta name="description" content="frontend ong zonas grises">
-    <!-- <meta name="keywords" content="HTML, CSS, JavaScript"> -->
+    <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
     <script src='js/bootstrap.js'></script>
 </head>
-<!-- style="background-image: url(imgs/zona_grises-background.jpg);" -->
 
 <body>
     <!--ENCABEZADO-->
-    <header class="navbar navbar-expand-sm navbar-white bg-light text-dark">
-        <div class="navbar-collapse collapse">
+    <header class="navbar navbar-expand-sm bg-light text-dark">
+        <div class="navbar-collapse container-xl">
 
             <a href="#">
-                <img src="imgs/zona_grises.jpg" height="50" width="50" class="p-2 flex-grow-1 bd-highlight"></image>
+                <img src="imgs/zona_grises_logo.png" height="100" width="100"></image>
             </a>
-            <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+            <ul class="navbar-nav ms-auto mb-2 mb-sm-0 gap-3 pe-sm-5">
                 <li class="nav-item">
                     <a href="#" class="nav-link active" aria-current="page">Inicio</a>
                 </li>
@@ -35,7 +34,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link active">Novedades</a>
-
                 </li>
                 <li class="nav-item">
                     <a href="#" class="nav-link active">Login</a>
@@ -61,7 +59,7 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://place-puppy.com/1200x1300" class="mw-100" alt="Logo ONG Zona Grises" width="30%"
+                    <img src="https://place-puppy.com/1400x1300" class="mw-100" alt="Logo ONG Zona Grises" width="30%"
                         height="auto">
                 </div>
                 <div class="carousel-item">
@@ -85,11 +83,10 @@
 
     <!--NOVEDADES-->
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3">
             <div class="row">
-
                 <div class="card">
-                    <div class=" ms-1">
+                    <div class="my-3">
                         <img src="http://placekitten.com/700/700" class="card-img-top img-fluid" alt="image">
                         <div class="card-body">
                             <p class="card-text">
@@ -102,9 +99,8 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="card">
-                    <div class=" ms-1">
+                    <div class="my-3">
                         <img src="http://placekitten.com/820/1200" class="card-img-top img-fluid" alt="image">
                         <div class="card-body">
                             <p class="card-text">
@@ -117,9 +113,8 @@
                 </div>
             </div>
             <div class="row">
-
                 <div class="card">
-                    <div class=" ms-1">
+                    <div class="my-3">
                         <img src="http://placekitten.com/801/800" class="card-img-top img-fluid" alt="image">
                         <div class="card-body">
                             <p class="card-text">
@@ -135,53 +130,66 @@
     </div>
 
     <!--CONTRIBUCIONES-->
-    <div class="bg-black">
-        <h3>¿Como nos podes ayudar?</h3>
-        <p>Tenemos diversas maneras para que puedas contribuir con nosotros</p>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-            <div>
-                <img src="#">
-                <h4>Donaciones/Colectas</h4>
-                <p>Llevamos a cabo durante el año cuatro colectas de alimentos de elementos de higiene y de
-                    ropa.
-                </p>
-            </div>
-            <div>
-                <img src="bootstrap-icons/icons/gift-fill.svg">
-                <h4>Regalos especiales</h4>
-                <p>contamos con un proyecto que convoca regalos personalizados para todos/as los/as niños/as
-                    asistidos/as, y sus hermanitos/as.</p>
-            </div>
-            <div>
-                <img src="#">
+    <div class="bg-light">
+        <div class="container text-center">
+            <h3>¿Como nos podes ayudar?</h3>
+            <p>Tenemos diversas maneras para que puedas contribuir con nosotros</p>
+            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                <div>
+                    <img src="bootstrap-icons/icons/cash.svg" height="50vh">
+                    <h4>Donaciones/Colectas</h4>
+                    <p>Llevamos a cabo durante el año cuatro colectas de alimentos de elementos de higiene y de
+                        ropa.
+                    </p>
+                </div>
+                <div>
+                    <img src="bootstrap-icons/icons/gift-fill.svg" height="50vh">
+                    <h4>Regalos especiales</h4>
+                    <p>contamos con un proyecto que convoca regalos personalizados para todos/as los/as niños/as
+                        asistidos/as, y sus hermanitos/as.</p>
+                </div>
+                <div>
+                    <img src="bootstrap-icons/icons/people.svg" height="50vh">
 
-                <h4>Madrinaje/Padrinaje</h4>
-                <p>apuntamos a desarrollar madrinas y padrinos que dediquen tiempo al acompañamiento
-                    de las familias integralmente</p>
+                    <h4>Madrinaje/Padrinaje</h4>
+                    <p>apuntamos a desarrollar madrinas y padrinos que dediquen tiempo al acompañamiento
+                        de las familias integralmente</p>
+                </div>
             </div>
         </div>
     </div>
     <!--PIE DE PAGINA-->
-    <footer class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-        <div>
-            <h5>AREAS</h5>
-            <a href="#">Eventos</a>
-            <a href="#">Novedades</a>
-        </div>
-        <div>
-            <h5>NUESTRA ORGANIZACION</h5>
-            <a href="#">Contacto</a>
-            <a href="#">Nosotros</a>
-            <a href="#">Formas de ayudar</a>
-        </div>
+    <div class="container-md">
 
-        <div>
-            <h5>NUESTRAS REDES</h5>
+        <footer class="row g-4 my-5 row-cols-1 row-cols-lg-4">
+            <div>
+                <img src="imgs/zona_grises_logo.png" alt="zona_grises_logo" height="200" width="200">
+            </div>
+            <div>
+                <h5>AREAS</h5>
+                <div class="d-flex flex-column bd-highlight mb-3 gap-1">
+                    <a href="#">Eventos</a>
+                    <a href="#">Novedades</a>
+                </div>
+            </div>
+            <div>
+                <h5>NUESTRA ORGANIZACION</h5>
+                <div class="d-flex flex-column bd-highlight mb-3 gap-1">
+                    <a href="#">Contacto</a>
+                    <a href="#">Nosotros</a>
+                    <a href="#">Formas de ayudar</a>
+                </div>
+            </div>
 
-            <a href="#"><img src="bootstrap-icons/icons/linkedin.svg" width="20" height="20">Linkedin</a>
-            <a href="#"><img src="bootstrap-icons/icons/instagram.svg" width="20" height="20">Instagram</a>
-            <a href="#"><img src="bootstrap-icons/icons/facebook.svg" width="20" height="20">Facebook</a>
-        </div>
+            <div>
+                <h5>NUESTRAS REDES</h5>
+                <div class="d-flex bd-highlight mb-3 gap-1 center">
+                    <a href="#"><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
+                    <a href="#"><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
+                    <a href="#"><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
+                </div>
+            </div>
+    </div>
     </footer>
     <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
 </body>
