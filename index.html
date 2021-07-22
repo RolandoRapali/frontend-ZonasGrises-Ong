@@ -9,6 +9,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
     <script src='js/bootstrap.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -16,8 +17,8 @@
     <header class="navbar navbar-expand-sm bg-light text-dark">
         <div class="navbar-collapse container-xl">
 
-            <a href="#">
-                <img src="imgs/zona_grises_logo.png" height="100" width="100"></image>
+            <a class="logo-img" href="#">
+                <!--<img src="imgs/zona_grises_logo.png" height="100" width="100"></image>-->
             </a>
             <ul class="navbar-nav ms-auto mb-2 mb-sm-0 gap-3 pe-sm-5">
                 <li class="nav-item">
@@ -83,16 +84,14 @@
 
     <!--NOVEDADES-->
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3">
-            <div class="row">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3" id="card-container25">
+           <!-- <div class="row">
                 <div class="card">
-                    <div class="my-3">
+                    <div class="my-3" id="card1">
                         <img src="http://placekitten.com/700/700" class="card-img-top img-fluid" alt="image">
                         <div class="card-body">
-                            <p class="card-text">
-                                This is some content from a media component. You can replace this with any content and
-                                adjust it as
-                                needed.
+                            <p id="content1" class="card-text">
+                                
                             </p>
                         </div>
                     </div>
@@ -100,7 +99,7 @@
             </div>
             <div class="row">
                 <div class="card">
-                    <div class="my-3">
+                    <div class="my-3" id="card2">
                         <img src="http://placekitten.com/820/1200" class="card-img-top img-fluid" alt="image">
                         <div class="card-body">
                             <p class="card-text">
@@ -114,7 +113,7 @@
             </div>
             <div class="row">
                 <div class="card">
-                    <div class="my-3">
+                    <div class="my-3" id="card3">
                         <img src="http://placekitten.com/801/800" class="card-img-top img-fluid" alt="image">
                         <div class="card-body">
                             <p class="card-text">
@@ -126,6 +125,7 @@
                     </div>
                 </div>
             </div>
+        -->
         </div>
     </div>
 
@@ -162,8 +162,8 @@
     <div class="container-md">
 
         <footer class="row g-4 my-5 row-cols-1 row-cols-lg-4">
-            <div>
-                <img src="imgs/zona_grises_logo.png" alt="zona_grises_logo" height="200" width="200">
+            <div class="logo-img">
+                <!--<img src="imgs/zona_grises_logo.png" alt="zona_grises_logo" height="10vw">-->
             </div>
             <div>
                 <h5>AREAS</h5>
@@ -184,14 +184,53 @@
             <div>
                 <h5>NUESTRAS REDES</h5>
                 <div class="d-flex bd-highlight mb-3 gap-1 center">
-                    <a href="#"><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
-                    <a href="#"><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
-                    <a href="#"><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
+                    <a id="org-linkedin" ><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
+                    <a id="org-instagram" ><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
+                    <a id="org-facebook" ><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
                 </div>
             </div>
     </div>
     </footer>
+
     <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        getNews();
+        getOrganization();
+    });
+
+    function getNews() {
+        url = "http://localhost:8080/news?size=3&page=0";
+        $.get(url, function (data) {
+            $.each(data, function(i, news) {
+                for (let i = 0; i < news.length; i++) {
+                    $('#card-container25').append([$('<div>', { class: "row" })
+                        .append([$('<div>', { class: "card", id: "card" + i })
+                            .append([$('<div>', { class: "my-3" })
+                                .append([$('<img>', { src: news[i].image, class: "card-img-top img-fluid", alt: news[i].content }),
+                                $('<div>', { class: "card-body" })
+                                    .append([$('<p>', { class: "card-text" }).text(news[i].content)])
+                                ])
+                            ])
+                        ])
+                    ]);
+                }
+            });
+        });
+    }
+
+    function getOrganization() {
+        url = "http://localhost:8080/organization/public";
+        $.get(url, function (organization) {
+            $('.logo-img').prepend($('<img>', { src: organization.image, alt: organization.name + "-logo" }));
+            $('#org-linkedin').attr("href", organization.linkdnUrl);
+            $('#org-instagram').attr("href", organization.instagramUrl);
+            $('#org-facebook').attr("href", organization.facebookUrl);
+        });
+    }
+
+</script>
 </body>
 
 </html>
