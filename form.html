@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Zonas Grises</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="frontend ong zonas grises">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <script type="text/javascript" src="webjars/jquery/3.2.0/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src='js/bootstrap.js'></script>
+</head>
+
+<body>
+    <form id="contact-form" method="post">
+        <p>
+            nombre: <input type="text" id="name-form">
+        </p>
+        <p>
+            telefono: <input type="number" id="phone-form">
+        </p>
+        <p>
+            email: <input type="email" id="email-form">
+        </p>
+        <p>
+            mensaje: <input type="text" id="message-form">
+        </p>
+        <input type="submit" id="bot-submit" value="enviar">
+    </form>
+
+    <table>
+        <tr>
+            <th>id-contact</th>
+            <th>email</th>
+            <th>name</th>
+            <th>number</th>
+        </tr>
+        <tr id="id-contact">
+
+        </tr>
+        <tr id="email">
+
+        </tr>
+        <tr id="name">
+
+        </tr>
+        <tr id="message">
+        </tr>
+    </table>
+
+    <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            postContact();
+            //filltable();
+        });
+
+        function fillTable() {
+            $.get("http://localhost:8080/contacts", function (contacts) {
+                $.each(contacts.items, function (i, item) {
+                    $("<td>").appendTo("#id-contact").text(contacts.id_contact);
+                    $("<td>").appendTo("#email").text(contacts.email);
+                });
+            }
+            )
+        }
+
+        function postContact() {
+            $('#bot-submit').click(function () {
+                var settings = {
+                    "url": "http://localhost:8080/contacts",
+                    "method": "POST",
+                    "timeout": 0,
+                    "headers": {
+                        "Content-Type": "application/json"
+                    },
+                    "data": JSON.stringify({
+                        "name": $('#name-form').val(),
+                        "phone": $('#phone-form').val(),
+                        "email": $('#email-form').val(),
+                        "message": $('#message-form').val()
+                    })
+                };
+
+                $.ajax(settings).done(function (response) {
+                    console.log(response);
+                });
+
+            });
+        }
+    </script>
+
+</body>
+
+</html>

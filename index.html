@@ -8,17 +8,25 @@
     <meta name="description" content="frontend ong zonas grises">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
-    <script src='js/bootstrap.js'></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- <script type="text/javascript" src="webjars/jquery/3.2.0/jquery.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <script src='js/bootstrap.js'></script>
 </head>
 
-<body>
+<body style="background:url(imgs/zona_grises-background.png);">
+<div>
+
     <!--ENCABEZADO-->
     <header class="navbar navbar-expand-sm bg-light text-dark">
         <div class="navbar-collapse container-xl">
 
             <a class="logo-img" href="#">
-                <!--<img src="imgs/zona_grises_logo.png" height="100" width="100"></image>-->
             </a>
             <ul class="navbar-nav ms-auto mb-2 mb-sm-0 gap-3 pe-sm-5">
                 <li class="nav-item">
@@ -44,30 +52,30 @@
         </div>
     </header>
     <!--SLIDER-->
-    <div class="border p-4 text-center mb-4">
+    <div class="p-4 text-center mb-4">
 
         <div id="myCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
             <div class="carousel-indicators">
                 <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="0"
-                    class="active" aria-current="true" aria-label="Slide1">
+                        class="active" aria-current="true" aria-label="Slide1">
                 </button>
                 <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="1"
-                    aria-label="Slide2">
+                        aria-label="Slide2">
                 </button>
                 <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="2"
-                    aria-label="Slide3">
+                        aria-label="Slide3">
                 </button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://place-puppy.com/1400x1300" class="mw-100" alt="Logo ONG Zona Grises" width="30%"
-                        height="auto">
+                    <img src="imgs/slider001.jpg" class="mw-100" alt="Logo ONG Zona Grises" width="30%"
+                         height="auto">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://place-puppy.com/720x401" class="mw-100" alt="das" width="30%" height="auto">
+                    <img src="imgs/slider002.jpg" class="mw-100" alt="das" width="30%" height="auto">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://place-puppy.com/800x800" class="mw-100" alt="..." width="30%" height="auto">
+                    <img src="imgs/slider003.jpg" class="mw-100" alt="..." width="30%" height="auto">
                 </div>
 
             </div>
@@ -84,21 +92,20 @@
 
     <!--NOVEDADES-->
     <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3" id="card-container25">
-           
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3" id="card-container">
         </div>
     </div>
 
     <!--CONTRIBUCIONES-->
     <div class="bg-light">
-        <div class="container text-center">
+        <div class="container text-center py-5">
             <h3>¿Como nos podes ayudar?</h3>
             <p>Tenemos diversas maneras para que puedas contribuir con nosotros</p>
             <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
                 <div>
                     <img src="bootstrap-icons/icons/cash.svg" height="50vh">
                     <h4>Donaciones/Colectas</h4>
-                    <p>Llevamos a cabo durante el año cuatro colectas de alimentos de elementos de higiene y de
+                    <p class="">Llevamos a cabo durante el año cuatro colectas de alimentos de elementos de higiene y de
                         ropa.
                     </p>
                 </div>
@@ -144,53 +151,69 @@
             <div>
                 <h5>NUESTRAS REDES</h5>
                 <div class="d-flex bd-highlight mb-3 gap-1 center">
-                    <a id="org-linkedin" ><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
-                    <a id="org-instagram" ><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
-                    <a id="org-facebook" ><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
+                    <a id="org-linkedin"><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
+                    <a id="org-instagram"><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
+                    <a id="org-facebook"><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
                 </div>
             </div>
-    </div>
-    </footer>
 
-    <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
 
-<script type="text/javascript">
+            <button id="bot">
+                le boton
+            </button>
+
+
+        </footer>
+
+        <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
+
+        <script type="text/javascript">
+
     $(document).ready(function () {
         getNews();
         getOrganization();
     });
 
     function getNews() {
-        url = "http://localhost:8080/news?size=3&page=0";
+        let size = 3//$('#size').val(); //document.getElementById("size");
+        let page = 0;
+
+
+        url = "http://localhost:8080/news?size="+ size +"&page="+ page;
         $.get(url, function (data) {
             $.each(data, function(i, news) {
                 for (let i = 0; i < news.length; i++) {
-                    $('#card-container25').append([$('<div>', { class: "row" })
+                    $('#card-container').append([$('<div>', { class: "row" })
                         .append([$('<div>', { class: "card", id: "card" + i })
                             .append([$('<div>', { class: "my-3" })
                                 .append([$('<img>', { src: news[i].image, class: "card-img-top img-fluid", alt: news[i].content }),
                                 $('<div>', { class: "card-body" })
                                     .append([$('<p>', { class: "card-text" }).text(news[i].content)])
+                                    ])
                                 ])
                             ])
-                        ])
-                    ]);
-                }
+                        ]);
+                    }
+                });
             });
-        });
-    }
+        }
 
-    function getOrganization() {
-        url = "http://localhost:8080/organization/public";
-        $.get(url, function (organization) {
-            $('.logo-img').prepend($('<img>', { src: organization.image, alt: organization.name + "-logo" }));
-            $('#org-linkedin').attr("href", organization.linkdnUrl);
+        function getOrganization() {
+            url = "http://localhost:8080/organization/public";
+            $.get(url, function (organization) {
+                $('.logo-img').prepend($('<img>', { src: organization.image, alt: organization.name + "-logo" , class:"img-responsive", height:"125px"}));
+                $('#org-linkedin').attr("href", organization.linkdnUrl);
             $('#org-instagram').attr("href", organization.instagramUrl);
             $('#org-facebook').attr("href", organization.facebookUrl);
         });
     }
 
-</script>
+
+
+        </script>
+    </div>
+</div>
+
 </body>
 
 </html>
