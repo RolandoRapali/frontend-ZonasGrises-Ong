@@ -9,210 +9,203 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <link rel='stylesheet' type='text/css' media='screen' href='css/bootstrap.css'>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- <script type="text/javascript" src="webjars/jquery/3.2.0/jquery.min.js"></script>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <script src='js/bootstrap.js'></script>
 </head>
 
 <body style="background:url(imgs/zona_grises-background.png);">
-<div>
+    <div>
 
-    <!--ENCABEZADO-->
-    <header class="navbar navbar-expand-sm bg-light text-dark">
-        <div class="navbar-collapse container-xl">
+        <!--ENCABEZADO-->
+        <header class="navbar navbar-expand-sm bg-light text-dark">
+            <div class="navbar-collapse container-xl">
 
-            <a class="logo-img" href="#">
-            </a>
-            <ul class="navbar-nav ms-auto mb-2 mb-sm-0 gap-3 pe-sm-5">
-                <li class="nav-item">
-                    <a href="#" class="nav-link active" aria-current="page">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Formas de ayuda</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Eventos</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Novedades</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Login</a>
+                <a class="logo-img" href="#">
+                </a>
+                <ul class="navbar-nav ms-auto mb-2 mb-sm-0 gap-3 pe-sm-5">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active" aria-current="page">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Formas de ayuda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link active">Novedades</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link active">Login</a>
 
-                </li>
-            </ul>
-        </div>
-    </header>
-    <!--SLIDER-->
-    <div class="p-4 text-center mb-4">
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <!--SLIDER-->
+        <div class="p-4 text-center mb-4">
 
-        <div id="myCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="0"
+            <div id="myCarousel" class="carousel slide carousel-dark" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="0"
                         class="active" aria-current="true" aria-label="Slide1">
-                </button>
-                <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="1"
+                    </button>
+                    <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="1"
                         aria-label="Slide2">
-                </button>
-                <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="2"
+                    </button>
+                    <button type="button" data-bs-ride="#myCarousel" data-bs-target="#myCarousel" data-bs-slide-to="2"
                         aria-label="Slide3">
+                    </button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imgs/slider001.jpg" class="mw-100" alt="Logo ONG Zona Grises" width="30%"
+                            height="auto">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/slider002.jpg" class="mw-100" alt="das" width="30%" height="auto">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imgs/slider003.jpg" class="mw-100" alt="..." width="30%" height="auto">
+                    </div>
+
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="imgs/slider001.jpg" class="mw-100" alt="Logo ONG Zona Grises" width="30%"
-                         height="auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="imgs/slider002.jpg" class="mw-100" alt="das" width="30%" height="auto">
-                </div>
-                <div class="carousel-item">
-                    <img src="imgs/slider003.jpg" class="mw-100" alt="..." width="30%" height="auto">
-                </div>
+        </div>
 
+        <!--NOVEDADES-->
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3" id="card-container">
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
 
-    <!--NOVEDADES-->
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 p-4 mb-4 gap-3" id="card-container">
-        </div>
-    </div>
+        <!--CONTRIBUCIONES-->
+        <div class="bg-light">
+            <div class="container text-center py-5">
+                <h3>¿Como nos podes ayudar?</h3>
+                <p>Tenemos diversas maneras para que puedas contribuir con nosotros</p>
+                <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
+                    <div>
+                        <img src="bootstrap-icons/icons/cash.svg" height="50vh">
+                        <h4>Donaciones/Colectas</h4>
+                        <p class="">Llevamos a cabo durante el año cuatro colectas de alimentos de elementos de higiene
+                            y de
+                            ropa.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="bootstrap-icons/icons/gift-fill.svg" height="50vh">
+                        <h4>Regalos especiales</h4>
+                        <p>contamos con un proyecto que convoca regalos personalizados para todos/as los/as niños/as
+                            asistidos/as, y sus hermanitos/as.</p>
+                    </div>
+                    <div>
+                        <img src="bootstrap-icons/icons/people.svg" height="50vh">
 
-    <!--CONTRIBUCIONES-->
-    <div class="bg-light">
-        <div class="container text-center py-5">
-            <h3>¿Como nos podes ayudar?</h3>
-            <p>Tenemos diversas maneras para que puedas contribuir con nosotros</p>
-            <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-                <div>
-                    <img src="bootstrap-icons/icons/cash.svg" height="50vh">
-                    <h4>Donaciones/Colectas</h4>
-                    <p class="">Llevamos a cabo durante el año cuatro colectas de alimentos de elementos de higiene y de
-                        ropa.
-                    </p>
-                </div>
-                <div>
-                    <img src="bootstrap-icons/icons/gift-fill.svg" height="50vh">
-                    <h4>Regalos especiales</h4>
-                    <p>contamos con un proyecto que convoca regalos personalizados para todos/as los/as niños/as
-                        asistidos/as, y sus hermanitos/as.</p>
-                </div>
-                <div>
-                    <img src="bootstrap-icons/icons/people.svg" height="50vh">
-
-                    <h4>Madrinaje/Padrinaje</h4>
-                    <p>apuntamos a desarrollar madrinas y padrinos que dediquen tiempo al acompañamiento
-                        de las familias integralmente</p>
+                        <h4>Madrinaje/Padrinaje</h4>
+                        <p>apuntamos a desarrollar madrinas y padrinos que dediquen tiempo al acompañamiento
+                            de las familias integralmente</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!--PIE DE PAGINA-->
-    <div class="container-md">
+        <!--PIE DE PAGINA-->
+        <div class="container-md">
 
-        <footer class="row g-4 my-5 row-cols-1 row-cols-lg-4">
-            <div class="logo-img">
-                <!--<img src="imgs/zona_grises_logo.png" alt="zona_grises_logo" height="10vw">-->
-            </div>
-            <div>
-                <h5>AREAS</h5>
-                <div class="d-flex flex-column bd-highlight mb-3 gap-1">
-                    <a href="#">Eventos</a>
-                    <a href="#">Novedades</a>
+            <footer class="row g-4 my-5 row-cols-1 row-cols-lg-4">
+                <div class="logo-img">
+                    <!--<img src="imgs/zona_grises_logo.png" alt="zona_grises_logo" height="10vw">-->
                 </div>
-            </div>
-            <div>
-                <h5>NUESTRA ORGANIZACION</h5>
-                <div class="d-flex flex-column bd-highlight mb-3 gap-1">
-                    <a href="#">Contacto</a>
-                    <a href="#">Nosotros</a>
-                    <a href="#">Formas de ayudar</a>
+                <div>
+                    <h5>AREAS</h5>
+                    <div class="d-flex flex-column bd-highlight mb-3 gap-1">
+                        <a href="#">Eventos</a>
+                        <a href="#">Novedades</a>
+                    </div>
                 </div>
-            </div>
-
-            <div>
-                <h5>NUESTRAS REDES</h5>
-                <div class="d-flex bd-highlight mb-3 gap-1 center">
-                    <a id="org-linkedin"><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
-                    <a id="org-instagram"><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
-                    <a id="org-facebook"><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
+                <div>
+                    <h5>NUESTRA ORGANIZACION</h5>
+                    <div class="d-flex flex-column bd-highlight mb-3 gap-1">
+                        <a href="#">Contacto</a>
+                        <a href="#">Nosotros</a>
+                        <a href="#">Formas de ayudar</a>
+                    </div>
                 </div>
-            </div>
 
+                <div>
+                    <h5>NUESTRAS REDES</h5>
+                    <div class="d-flex bd-highlight mb-3 gap-1 center">
+                        <a id="org-linkedin"><img src="bootstrap-icons/icons/linkedin.svg" width="30" height="30"></a>
+                        <a id="org-instagram"><img src="bootstrap-icons/icons/instagram.svg" width="30" height="30"></a>
+                        <a id="org-facebook"><img src="bootstrap-icons/icons/facebook.svg" width="30" height="30"></a>
+                    </div>
+                </div>
 
-            <button id="bot">
-                le boton
-            </button>
+            </footer>
 
+            <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
 
-        </footer>
+            <script type="text/javascript">
 
-        <script src="https://unpkg.com/@popperjs/core@2.4.0/dist/umd/popper.min.js"></script>
-
-        <script type="text/javascript">
-
-    $(document).ready(function () {
-        getNews();
-        getOrganization();
-    });
-
-    function getNews() {
-        let size = 3//$('#size').val(); //document.getElementById("size");
-        let page = 0;
-
-
-        url = "http://localhost:8080/news?size="+ size +"&page="+ page;
-        $.get(url, function (data) {
-            $.each(data, function(i, news) {
-                for (let i = 0; i < news.length; i++) {
-                    $('#card-container').append([$('<div>', { class: "row" })
-                        .append([$('<div>', { class: "card", id: "card" + i })
-                            .append([$('<div>', { class: "my-3" })
-                                .append([$('<img>', { src: news[i].image, class: "card-img-top img-fluid", alt: news[i].content }),
-                                $('<div>', { class: "card-body" })
-                                    .append([$('<p>', { class: "card-text" }).text(news[i].content)])
-                                    ])
-                                ])
-                            ])
-                        ]);
-                    }
+                $(document).ready(function () {
+                    getNews();
+                    getOrganization();
                 });
-            });
-        }
 
-        function getOrganization() {
-            url = "http://localhost:8080/organization/public";
-            $.get(url, function (organization) {
-                $('.logo-img').prepend($('<img>', { src: organization.image, alt: organization.name + "-logo" , class:"img-responsive", height:"125px"}));
-                $('#org-linkedin').attr("href", organization.linkdnUrl);
-            $('#org-instagram').attr("href", organization.instagramUrl);
-            $('#org-facebook').attr("href", organization.facebookUrl);
-        });
-    }
+                function getNews() {
+                    let size = 3;
+                    let page = 0;
 
 
+                    url = "http://localhost:8080/news?size=" + size + "&page=" + page;
+                    $.get(url, function (data) {
+                        $.each(data, function (i, news) {
+                            for (let i = 0; i < news.length; i++) {
+                                $('#card-container').append([$('<div>', { class: "row" })
+                                    .append([$('<div>', { class: "card", id: "card" + i })
+                                        .append([$('<div>', { class: "my-3" })
+                                            .append([$('<img>', { src: news[i].image, class: "card-img-top img-fluid", alt: news[i].name + i }),
+                                            $('<div>', { class: "card-body" })
+                                                .append([$('<p>', { class: "card-text" }).text(news[i].content)])
+                                            ])
+                                        ])
+                                    ])
+                                ]);
+                            }
+                        });
+                    });
+                }
 
-        </script>
+                function getOrganization() {
+                    url = "http://localhost:8080/organization/public";
+                    $.get(url, function (organization) {
+                        $('.logo-img').prepend($('<img>', { src: organization.image, alt: organization.name + "-logo", class: "img-responsive", height: "125px" }));
+                        $('#org-linkedin').attr("href", organization.linkdnUrl);
+                        $('#org-instagram').attr("href", organization.instagramUrl);
+                        $('#org-facebook').attr("href", organization.facebookUrl);
+                    });
+                }
+
+            </script>
+        </div>
     </div>
-</div>
 
 </body>
 
